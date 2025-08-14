@@ -16,7 +16,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
 
@@ -43,7 +43,7 @@
     </nav>
     <section id="profile">
         <div class="section__pic-container">
-            <img src="./assets/ankita.png" alt = "Ankita Agrawal Profile picture"/>
+            <img src="assets/ankita.png" alt = "Ankita Agrawal Profile picture" class/>
         </div>
         <div class="section__text">
             <p class="section__text__p1">Hello I'm</p>
@@ -51,7 +51,7 @@
             <p class="section__text__p2">Software Developer</p>
             <div class="btn-container">
                 <button class = "btn btn-color-2" onclick="window.open('./assets/Resume.pdf')"> Download CV </button>
-                <button class = "btn btn-color-1" onclick="location.href('./#contact')"> Contact Info </button>
+                <button class = "btn btn-color-1" onclick="location.href='./#contact'"> Contact Info </button>
             </div>
             <div id = "socials-container">
                 <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/ankita-agrawal-8966b3114/'"/>
@@ -64,16 +64,21 @@
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic"/>
+                <img src="./assets/ankita1.jpg" alt="Profile picture" class="about-pic"/>
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
-                    <div class="details-container">
+                    <div class="details-container tab-icon" onclick="location.href='./#experience'">
                         <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
                         <h3> Experience </h3>
                         <p>6+ years <br> Software Developer</p>
                     </div>
-                    <div class="details-container">
+                    <div class="details-container tab-icon" onclick="location.href='./#skills'" >
+                        <img src="./assets/skill.png" alt="Skill icon" class="icon"/>
+                        <h3> Skill </h3>
+                        <p>Full Stack <br> Developer </p>
+                    </div>
+                    <div class="details-container tab-icon" onclick= "location.href='./#education'">
                         <img src="./assets/education.png" alt="Education icon" class="icon"/>
                         <h3> Education </h3>
                         <p>Bachelor of Engineering <br> Computer Science</p>
@@ -81,7 +86,10 @@
                 </div>
                 <div class="text-container">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        Experienced Java Full Stack Developer with 6 years of expertise passionate about driving
+                        growth for companies. Proficient in Java development, microservice architecture,
+                        and API integration. Dedicated to contributing innovative solutions and
+                        collaborating with teams to propel organizational success and growth.
                     </p>
                 </div>
 
@@ -90,8 +98,83 @@
         <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'"/>
     </section>
     <section id="experience">
-        <p class="section__text__p1">Explore my </p>
+        <p class="section__text__p1">Explore my</p>
         <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                    <div class="card-front">
+                           <h1 class = "title">Fair Isaac Corporation (FICO)</h1>
+                             <p> Software Engineer ||  <br> Oct 2023 - Present</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Software Engineer II</h4>
+                            <strong>Project: North Star - Business Terms Capability</strong>
+                            <ul>
+                                <li><p>Engineered and optimized RESTful APIs using Java and Spring Boot, ensuring scalable and secure backend services for enterprise applications.</p></li>
+                                <li><p>Designed and deployed high-performance gRPC services to enable low-latency and efficient inter-service communication across microservices.</p></li>
+                                <li><p>Developed a proof of concept using ANTLR (Another Tool for Language Recognition) to implement advanced Google-style search filtering capabilities.</p></li>
+                                <li><p>Built responsive, user-friendly interfaces using Angular, integrating REST and gRPC endpoints to deliver seamless end-to-end functionality.</p></li>
+                                <li><p>Implemented state management, reusable components, and form validation in the frontend to enhance maintainability and user experience.</p></li>
+                                <li><p>Collaborated closely with cross-functional teams, participating in code reviews, sprint planning, and end-to-end feature delivery from UI to database.</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="details-container" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h1 class="title">Infosys Ltd.</h1>
+                            <p>Specialist Programmer / System Engineer<br>Aug 2019 – Oct 2023</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Specialist Programmer / System Engineer</h4>
+
+                            <!-- Apollo GSX -->
+                            <strong>Project: Apollo GSX (Client: Apple)</strong>
+                            <ul>
+                                <li><p>Spearheaded the implementation of Microservice Architecture and Kafka technologies, incorporating new features and requirements.</p></li>
+                                <li><p>Ensured defect-free project delivery, earning recognition as a key contributor.</p></li>
+                                <li><p>Collaborated with development and QA teams to design scalable, high-performance solutions meeting client requirements.</p></li>
+                                <li><p>Facilitated requirement discussions and defined application specifications.</p></li>
+                                <li><p>Actively engaged in production release activities, coordinating deployments across multiple releases.</p></li>
+                            </ul>
+
+                            <!-- NGD -->
+                            <strong>Project: NGD (Client: BT)</strong>
+                            <ul>
+                                <li><p>Integrated Spring Boot and Angular for seamless front-end and back-end communication in a microservices setup.</p></li>
+                                <li><p>Performed root cause analysis to resolve production issues quickly.</p></li>
+                                <li><p>Worked directly with clients to gather requirements and propose effective technical solutions.</p></li>
+                            </ul>
+
+                            <!-- NBN -->
+                            <strong>Project: NBN (Network Service Provider Sector)</strong>
+                            <ul>
+                                <li><p>Utilized SpatialNet with AutoCAD and Oracle DB for spatial analysis and network infrastructure management.</p></li>
+                            </ul>
+
+                            <!-- Emergency Messaging System -->
+                            <strong>Project: Emergency Messaging System</strong>
+                            <ul>
+                                <li><p>Developed a client-server model using socket programming, Spring, Angular, and RESTful APIs.</p></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow"
+             onclick="location.href='./#skills'" />
+    </section>
+    <section id="skills">
+        <p class="section__text__p1">Explore my </p>
+        <h1 class="title">Skills</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
@@ -219,40 +302,34 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'"/>
+        <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#education'"/>
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse my Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class = "about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-1.png" alt="Project 1" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project One</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/writetoanki'">
-                            Github
-                        </button>
-                    </div>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/writetoanki'">
-                        Live Demo
-                    </button>
+    <section id="education">
+        <p class="section__text__p1">Explore my</p>
+        <h1 class="title">Education</h1>
+        <div class="education-timeline">
+            <div class="education-item">
+                <div class="edu-year">2015 - 2019</div>
+                <div class="edu-content">
+                    <h3>B.E in Computer Science and Engineering</h3>
+                    <p>Jabalpur Engineering College</p>
+                    <span class="edu-grade">8.73 CGPA</span>
                 </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/project-2.png" alt="Project 1" class="project-img"/>
-                    </div>
-                    <h2 class="experience-sub-title project-title">Project One</h2>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/writetoanki'">
-                            Github
-                        </button>
-                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/writetoanki'">
-                            Live Demo
-                        </button>
-                    </div>
+            </div>
+            <div class="education-item">
+                <div class="edu-year">2015</div>
+                <div class="edu-content">
+                    <h3>Higher Secondary - Class XII</h3>
+                    <p>St. Norbert Girls H S School</p>
+                    <span class="edu-grade">93.80%</span>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="edu-year">2013</div>
+                <div class="edu-content">
+                    <h3>High School - Class X</h3>
+                    <p>Pratibha Vidhya Peeth High School</p>
+                    <span class="edu-grade">93.67%</span>
                 </div>
             </div>
         </div>
@@ -278,7 +355,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>

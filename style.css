@@ -178,6 +178,9 @@ section {
     cursor: pointer;
     height: 2rem;
 }
+.tab-icon {
+    cursor: pointer;
+}
 .btn-container{
     display: flex;
     justify-content: center;
@@ -280,6 +283,33 @@ section {
     gap: 2.5rem;
     justify-content: space-around;
 }
+.job-title {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.job-title span {
+    font-weight: normal;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.project-block {
+    margin-bottom: 1rem;
+}
+
+.project-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+.project-block ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: #555;
+}
 article{
     display: flex;
     width: 10rem;
@@ -289,6 +319,67 @@ article{
 article .icon {
     cursor: default;
 }
+/* ===== Base Education Styles ===== */
+#education {
+    padding: 2rem 0;
+}
+
+#education .education-timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px solid #ccc; /* Neutral gray timeline line */
+}
+
+#education .education-item {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+#education .education-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Timeline circle */
+#education .education-item::before {
+    content: '';
+    position: absolute;
+    left: -1.45rem; /* aligns circle with timeline */
+    top: 1.25rem;
+    width: 14px;
+    height: 14px;
+    background: #fff; /* white center */
+    border-radius: 50%;
+    border: 3px solid #ccc; /* neutral gray outline */
+}
+
+/* Year label */
+#education .edu-year {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #555; /* dark gray text */
+    margin-bottom: 0.5rem;
+}
+
+/* Headings */
+#education h3 {
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+/* Description text */
+#education p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
 #projects{
     position: relative;
 }
@@ -350,3 +441,71 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* Section Styling */
+
+#experience .title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #222;
+}
+
+#experience .experience-details-container .details-container {
+    perspective: 1000px; /* Enables 3D flip */
+    height: 80vh;
+}
+
+#experience .experience-details-container .details-container .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#experience .experience-details-container .details-container.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+#experience .experience-details-container .card-front,
+#experience .experience-details-container .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#experience .experience-details-container .card-front {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#experience .experience-details-container .card-back {
+    transform: rotateY(180deg);
+    font-size: 1.25rem;
+    text-align: left;
+    overflow-y: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#experience .experience-details-container .card-back h4 {
+    margin-top: 0;
+    color: #0078d4;
+}
+
+#experience .experience-details-container .card-back ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
